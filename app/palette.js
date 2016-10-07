@@ -2,11 +2,17 @@
 pixel_studio.palette = {
 
 	colors: [],
+	color_selected: null,
+
+	select_color: function( color ){
+		this.color_selected = color;
+	},
 
 	init_colors: function( color_list ){
 
 		this.colors = color_list;
 
+		// Création de représentation de la palette
 		let $colors = $('#colors'),
 			$one = $colors.children('li').detach();
 
@@ -20,6 +26,9 @@ pixel_studio.palette = {
 			$colors.append(li);
 
 		}
+		// couleur par défaut
+		
+		this.select_color(this.colors[0]);
 		console.log('palette : colors ready');
 	}
 };

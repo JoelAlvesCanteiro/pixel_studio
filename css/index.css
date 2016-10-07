@@ -29,7 +29,7 @@ img{
 #tools{
 	padding-bottom: 10px;
 	margin-bottom: 10px;
-	border-bottom: 2px  dashed #999;
+	border-bottom: 2px  solid #999;
 }
 
 #tools li, #colors li {

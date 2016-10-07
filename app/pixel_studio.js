@@ -6,11 +6,12 @@ var pixel_studio = {
 		// couleurs de la palette
 		
 		let colors = [
-			new Color('green', [56,187,136]),
-			new Color('purple', [135,35,111]),
-			new Color('sand', [220,194,140]),
-			new Color('myst', [80,62,116]),
+			new Color('english red', [247,35,12]),
+			new Color('cyan', [0,0,255]),
+			new Color('banana', [209,182,6]),
+			new Color('bordeaux', [109,7,26]),
 			new Color('lilas', [151,146,197])
+
 		];
 		this.palette.init_colors( colors );
 
