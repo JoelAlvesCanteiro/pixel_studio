@@ -4,3 +4,11 @@ body{
 img{
 	width: 100px;
 }
+.icon{
+	width: 50px;
+
+}
+table, #carre{
+	border: 5px solid white;
+	padding: 15px 10px;
+}
