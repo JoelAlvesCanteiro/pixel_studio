@@ -26,9 +26,19 @@ pixel_studio.palette = {
 			$colors.append(li);
 
 		}
+
+		$('#colors').on('click', 'li', function(e){
+			var sel = pixel_studio.palette;
+			sel.select_color(sel.colors[$(this).index()]);
+			console.log(sel.color_selected);
+			$(".sel_color").toggleClass('sel_color');
+			$(this).toggleClass('sel_color');
+		})
+
 		// couleur par défaut
 		
 		this.select_color(this.colors[0]);
+		
 		console.log('palette : colors ready');
 	}
 };

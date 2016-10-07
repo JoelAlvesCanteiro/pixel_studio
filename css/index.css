@@ -1,10 +1,7 @@
 body{
 	margin: 0;
+	background-color: #FAF0E6;
 }
-img{
-	width: 100px;
-}
-
 /* --------------------- P A L E T T E ---------------------- */
 
 #palette {
@@ -53,4 +50,7 @@ img{
 
 #tools li:hover, #colors  li:hover{
 	border: 3px solid #BDBDBD;
+}
+.sel_color{
+	border: 3px solid #FFFFFF!important;
 }
