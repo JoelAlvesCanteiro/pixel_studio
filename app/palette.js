@@ -1,1 +1,3 @@
-var Palette = {};
+pixel_studio.palette = {
+
+};
