@@ -1,5 +1,4 @@
-#PIXEL STUDIO
+# PIXEL STUDIO
+## A drawing web-app
 
-## A drawing web application
-
-This is a web application where you can use your skill and your imagination to draw what you want.
+Let your _imagination_ take place with "Pixel Studio", YOUR web-app created by the __DEV1__ from __L'École Multimédia__.

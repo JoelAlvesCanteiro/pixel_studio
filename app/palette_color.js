@@ -1,5 +1,4 @@
-
-pixel_studio.palette = {
+pixel_studio.palette_color = {
 
 	colors: [],
 	color_selected: null,
@@ -8,11 +7,12 @@ pixel_studio.palette = {
 		this.color_selected = color;
 	},
 
-	init_colors: function( color_list ){
+	init: function( color_list ){
 
 		this.colors = color_list;
 
-		// Création de représentation de la palette
+		// Création de la représentation de la palette
+		
 		let $colors = $('#colors'),
 			$one = $colors.children('li').detach();
 
@@ -24,21 +24,22 @@ pixel_studio.palette = {
 			li.css('background-color', color.to_string())
 			  .attr('title', color.name);
 			$colors.append(li);
-
 		}
 
 		$('#colors').on('click', 'li', function(e){
-			var sel = pixel_studio.palette;
-			sel.select_color(sel.colors[$(this).index()]);
-			console.log(sel.color_selected);
-			$(".sel_color").toggleClass('sel_color');
-			$(this).toggleClass('sel_color');
+			let cut = pixel_studio.palette_color;
+			cut.select_color(cut.colors[$(this).index()]);
+			console.log(cut.color_selected);
+			$(".selected_color").toggleClass('selected_color');
+			$(this).toggleClass('selected_color');
 		})
 
-		// couleur par défaut
+
+		// Couleur par défaut
 		
 		this.select_color(this.colors[0]);
-		
+		$("#colors li").eq(0).toggleClass('selected_color');
+
 		console.log('palette : colors ready');
 	}
 };
