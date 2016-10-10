@@ -54,3 +54,9 @@ body{
 .sel_color{
 	border: 3px solid #FFFFFF!important;
 }
+#zone_dessin canvas{
+ 	position: absolute;
+ 	right:3px;
+ 	top: 3px;
+ 	border: 1px solid #aaa;
+ } 
