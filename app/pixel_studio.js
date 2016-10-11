@@ -19,8 +19,8 @@ var pixel_studio = {
 		// outil de la palette 
 		// 
 		let tools = [
-			new Tool('brush', 'images/paint.png'),
-			new Tool('eraser', 'images/erase.png')
+			new Pencil(),
+			new Eraser()
 		];
 		
 		this.palette_tool.init( tools );

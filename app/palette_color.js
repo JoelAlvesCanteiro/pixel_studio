@@ -5,6 +5,8 @@ pixel_studio.palette_color = {
 
 	select_color: function( color ){
 		this.color_selected = color;
+
+		this.bg_color = new Color('white', [255,255,255]);
 	},
 
 	init: function( color_list ){
