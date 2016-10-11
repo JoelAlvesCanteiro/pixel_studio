@@ -1,46 +1,56 @@
+
 pixel_studio.palette_color = {
 
 	colors: [],
-	color_selected: null,
+	selected: null,
 
-	select_color: function( color ){
-		this.color_selected = color;
-
-		this.bg_color = new Color('white', [255,255,255]);
+	get_selected: function(){
+		return this.selected;
 	},
 
-	init: function( color_list ){
+	select_color:  function( color ){
 
-		this.colors = color_list;
+		this.selected = color;
+		$('#colors li').removeClass('selected')
+						.eq(color.id)
+						.addClass('selected');
+	},
 
-		// Création de la représentation de la palette
+	init: function( colors ){
+
+		this.colors = colors;		
+
+		//  création de la représentation de la palette
 		
 		let $colors = $('#colors'),
-			$one = $colors.children('li').detach();
+			$one 	= $colors.children('li').detach();
 
-		for(let j=0; j<color_list.length; j++){
+		for(let j=0; j<colors.length; j++){
 
 			let li 		= $one.clone(),
 				color 	= this.colors[j];
+
+			color.id 	= j;
 
 			li.css('background-color', color.to_string())
 			  .attr('title', color.name);
 			$colors.append(li);
 		}
 
-		$('#colors').on('click', 'li', function(e){
-			let cut = pixel_studio.palette_color;
-			cut.select_color(cut.colors[$(this).index()]);
-			console.log(cut.color_selected);
-			$(".selected_color").toggleClass('selected_color');
-			$(this).toggleClass('selected_color');
-		})
-
-
-		// Couleur par défaut
+		// couleur par defaut
 		
 		this.select_color(this.colors[0]);
-		$("#colors li").eq(0).toggleClass('selected_color');
+
+		// gestion des click
+		
+		var self = this;
+
+		$('#colors').on('click', 'li', function(){
+
+			let index = $( "#colors li" ).index( this );
+			self.select_color(self.colors[index]);		
+		});
+
 
 		console.log('palette : colors ready');
 	}

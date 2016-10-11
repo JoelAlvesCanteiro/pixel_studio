@@ -1,8 +1,9 @@
+
 var pixel_studio = {
 
 	init: function(){
 
-		// couleur de la palette
+		// couleurs de la palette
 		
 		let colors = [
 			new Color('green', [56,187,136]),
@@ -13,22 +14,22 @@ var pixel_studio = {
 			new Color('firebrick', [178,34,34]),
 			new Color('palegoldenrod', [238,232,170]),
 		];
-
 		this.palette_color.init( colors );
 
-		// outil de la palette 
-		// 
-		let tools = [
-			new Pencil(),
-			new Eraser()
-		];
+		// outils de dessin
 		
+		let tools = [
+			new Pencil(this.canvas),
+			new Eraser(this.canvas)
+		];
+
 		this.palette_tool.init( tools );
 
-		//canvas
-		this.canvas.init("zone_dessin", window.innerWidth - 125, window.innerHeight - 5,100);
+		// canvas
+		
+		this.canvas.init('zone_dessin', window.innerWidth, window.innerHeight  - 5, 64);
 
-		console.log('Pixel studio is initiated and ready');
+		console.log("Pixel studio is initiated and  ready");
 	}
 };
 

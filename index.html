@@ -1,14 +1,12 @@
 <!DOCTYPE html>
-<html lang="fr">
-	<head>
-		<meta charset="UTF-8">
-		<title>Pixel Studio</title>
-		<link rel="stylesheet" href="css/index.css">
-	</head>
-	<body>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>P I X E L S T U D I O</title>
+	<link rel="stylesheet" href="css/pixel_studio.css">
+</head>
+<body>
 
-	<h1> P I X E L S T U D I O </h1>
-	
 	<div id="zone_dessin"></div>
 
 	<div id="palette">
@@ -19,17 +17,20 @@
 			<li></li>
 		</ul>
 	</div>
-		
-		<script src="app/jquery-3.1.1.js"></script>
-		<script src="app/pixel_studio.js"></script>
-		<script src="app/color.class.js"></script>
-		<script src="app/tool.class.js"></script>
-		<script src="app/erase.class.js"></script>
-		<script src="app/pencil.class.js"></script>
-		<script src="app/palette_color.js"></script>
-		<script src="app/palette_tools.js"></script>
-		<script src="app/canvas.js"></script>
-		<script src="app/main.js"></script>
-		
-	</body>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="app/pixel_studio.js"></script>
+	<script src="app/color.class.js"></script>
+	<script src="app/tool.class.js"></script>
+	<script src="app/eraser.class.js"></script>
+	<script src="app/pencil.class.js"></script>
+	<script src="app/palette_color.js"></script>
+	<script src="app/palette_tool.js"></script>
+	<script src="app/canvas.js"></script>
+	<script>
+		$(function(){
+			pixel_studio.init();
+		});
+	</script>
+</body>
 </html>
